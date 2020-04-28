@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <UseWPF>true</UseWPF>
+    <Configurations>DebugWithFake;Release</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugWithFake|AnyCPU'">
+    <OutputPath>..\Bin\DebugWithFake</OutputPath>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LogoFX.Client.Bootstrapping" Version="2.2.0-rc1" />
+    <PackageReference Include="LogoFX.Client.Bootstrapping.Adapters.SimpleContainer" Version="2.2.0-rc1" />
+    <PackageReference Include="LogoFX.Client.Bootstrapping.Core" Version="2.2.0-rc1" />
+    <PackageReference Include="LogoFX.Client.Mvvm.Commanding" Version="2.2.0-rc1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Samples.Specifications.Launcher.Shared\Samples.Specifications.Launcher.Shared.csproj" />
+    <ProjectReference Include="..\Samples.Specifications.Presentation.Contracts\Samples.Specifications.Presentation.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
