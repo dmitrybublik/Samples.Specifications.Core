@@ -5,10 +5,16 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <UseWPF>true</UseWPF>
-    <Configurations>DebugWithFake;Release</Configurations>
+    <Configurations>DebugWithFake;Release;DebugWithReal</Configurations>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugWithFake|AnyCPU'">
+    <OutputPath>..\Bin\DebugWithFake</OutputPath>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugWithReal|AnyCPU'">
     <OutputPath>..\Bin\DebugWithFake</OutputPath>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
