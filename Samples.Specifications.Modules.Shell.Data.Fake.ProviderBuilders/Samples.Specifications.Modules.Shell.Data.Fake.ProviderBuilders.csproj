@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Configurations>DebugWithFake;Release</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Attest.Fake.Builders" Version="2.1.0-rc1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Samples.Specifications.Modules.Shell.Data.Contracts.Providers\Samples.Specifications.Modules.Shell.Data.Contracts.Providers.csproj" />
+  </ItemGroup>
+
+</Project>

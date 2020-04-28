@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Configurations>DebugWithFake;Release</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Attest.Fake.Builders" Version="2.1.0-rc1" />
+    <PackageReference Include="JetBrains.Annotations" Version="2020.1.0" />
+    <PackageReference Include="Solid.Practices.Modularity" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Samples.Specifications.Modules.Shell.Data.Contracts.Providers\Samples.Specifications.Modules.Shell.Data.Contracts.Providers.csproj" />
+    <ProjectReference Include="..\Samples.Specifications.Modules.Shell.Data.Fake.Containers\Samples.Specifications.Modules.Shell.Data.Fake.Containers.csproj" />
+    <ProjectReference Include="..\Samples.Specifications.Modules.Shell.Data.Fake.ProviderBuilders\Samples.Specifications.Modules.Shell.Data.Fake.ProviderBuilders.csproj" />
+  </ItemGroup>
+
+</Project>
