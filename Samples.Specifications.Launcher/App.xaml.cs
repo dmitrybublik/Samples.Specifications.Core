@@ -1,5 +1,4 @@
 ﻿using LogoFX.Client.Bootstrapping;
-using Samples.Specifications.Launcher.Shared;
 using LogoFX.Client.Mvvm.Commanding;
 
 namespace Samples.Specifications.Launcher

@@ -1,7 +1,6 @@
 ﻿using System;
 using LogoFX.Client.Bootstrapping;
 using LogoFX.Client.Bootstrapping.Adapters.SimpleContainer;
-using Samples.Specifications.Launcher.Shared;
 using Samples.Specifications.Presentation.Contracts.Shell;
 using Solid.Practices.Composition;
 
@@ -19,7 +18,15 @@ namespace Samples.Specifications.Launcher
 
         public override CompositionOptions CompositionOptions => new CompositionOptions
         {
-            Prefixes = Consts.Prefixes
+            Prefixes = new[] {
+                "Samples.Specifications.Infra",
+                "Samples.Specifications.Data",
+                "Samples.Specifications.Model",
+                "Samples.Specifications.Presentation",
+                "Samples.Specifications.Modules",
+                "Samples.Specifications.Shell",
+                "Samples.Specifications.Licensing"
+            }
         };
 
         protected override void OnExit(object sender, EventArgs e)
